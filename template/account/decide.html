@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- <button pt-3 onclick="document.getElementById('id01').style.display='block'">Open Modal</button> -->
+
+<div id="id01" class="">
+   <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>E-FARMER-BUYER SYSTEM NASARAWA STATE NIGERIA</h1>
+      <br>
+      <h5>Are you A Farmer Who Want To Advertized And Sel Farm Product?</h5>
+    <br>
+      <div class="clearfix">
+        <a style="padding: 14px;" type="button" class="cancelbtn" href="{% url 'login' %}">NO, I WANT TO PURCHASE FARM PRODUCT</a>
+        <a style="padding: 14px;" type="button" class="deletebtn" href="{% url 'profile' %}">Yes, I AM FARMER WITH WHO HAS FARM PRODUCT</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

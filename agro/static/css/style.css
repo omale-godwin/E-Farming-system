@@ -1,0 +1,183 @@
+
+
+  
+  #showcase {
+    background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
+    position: relative;
+    min-height: 650px;
+    color: #fff;
+    padding-top: 2rem; }
+    #showcase .home-search {
+      min-height: 400px;
+      position: relative;
+      border-radius: 5px; }
+    #showcase .overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 400px;
+      width: 100%;
+      background: #49a760;}
+  
+
+  
+  #showcase-inner {
+    background: url(../img/building.jpg) no-repeat top center fixed/cover;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px; }
+    #showcase-inner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      width: 100%;
+      background: #49a760; }
+    #showcase-inner.showcase-search {
+      min-height: 270px; }
+  
+ 
+
+
+
+
+    
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #BA68C8
+    }
+    
+    .profile-button {
+        background: rgb(99, 39, 120);
+        box-shadow: none;
+        border: none
+    }
+    
+    .profile-button:hover {
+        background: #682773
+    }
+    
+    .profile-button:focus {
+        background: #682773;
+        box-shadow: none
+    }
+    
+    .profile-button:active {
+        background: #682773;
+        box-shadow: none
+    }
+    
+    .back:hover {
+        color: #682773;
+        cursor: pointer
+    }
+    
+    .labels {
+        font-size: 11px
+    }
+    
+    .add-experience:hover {
+        background: #BA68C8;
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px #BA68C8
+    }
+
+
+      #btt {
+       
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+      
+      button:hover {
+        opacity:1;
+      }
+      
+      /* Float cancel and delete buttons and add an equal width */
+      .cancelbtn, .deletebtn {
+        float: left;
+        width: 50%;
+      }
+      
+      /* Add a color to the cancel button */
+      .cancelbtn {
+        background-color: #ccc;
+        color: black;
+      }
+      
+      /* Add a color to the delete button */
+      .deletebtn {
+        background-color: #f44336;
+      }
+      
+      /* Add padding and center-align text to the container */
+      .container {
+        padding: 16px;
+        text-align: center;
+      }
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+       
+        padding-top: 200px;
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+      
+      /* Style the horizontal ruler */
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+       
+      /* The Modal Close Button (x) */
+      .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #f1f1f1;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #f44336;
+        cursor: pointer;
+      }
+      
+      /* Clear floats */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      /* Change styles for cancel button and delete button on extra small screens */
+      @media screen and (max-width: 300px) {
+        .cancelbtn, .deletebtn {
+           width: 100%;
+        }
+      }

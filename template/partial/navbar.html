@@ -1,0 +1,70 @@
+{% load static %}
+<nav class="main-menu">
+    <div class="container">
+        <div class="logo-box mr-3">
+            <a href="{% url 'index'%}" aria-label="logo image"><img src="{% static 'images/logo-dark.png' %}" width="153" alt=""></a>
+            <span class="fa fa-bars mobile-nav__toggler"></span>
+        </div><!-- /.logo-box -->
+        <ul class="main-menu__list">
+            <li class="ml-3 ">
+                <a href="{% url 'index'%}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'about'%}">About</a>
+            </li>
+            <li><a href="{% url 'services'%}">Services</a></li>
+         
+           
+            <li class=""><a href="{% url 'listings'%}">Product</a>
+               
+            </li>
+            <li class="ml-3 mr-3 "><a href="{% url 'contact'%}">Contact</a>
+                
+            </li>
+        </ul>
+        <!-- /.main-menu__list -->
+
+        <div class="main-header__info" style="width: 700px;">
+            <a href="tel:92-666-888-0000" class="main-header__info-phone">
+                <i class="agrikon-icon-phone-call"></i>
+                <span class="main-header__info-phone-content">
+                    <span class="main-header__info-phone-text">Call Anytime</span>
+                    <span style="width: 200px;" class="main-header__info-phone-title">+234 7064 115 889</span>
+                </span><!-- /.main-header__info-phone-content -->
+            </a><!-- /.main-header__info-phone -->
+        </div><!-- /.main-header__info -->
+        <ul  class="main-menu__list">
+            {% if user.is_authenticated %}
+           
+            {% if request.user.brofile.user  == '' %}
+            <li class="ml-3" >
+                <a href="{% url 'profile'%}">SELL PRODUCT</a></a>
+            </li>
+            {% else %}
+          
+            <li class="" >
+                <a href="{% url 'dashboard'%}">DASHBOARD</a></a>
+            </li>
+            {% endif %}
+            <li>
+                <a href="javascript:{document.getElementById('logout').submit()}">
+                  Logout
+                </a>
+                <form action="{% url 'logout' %}" method="POST" id="logout">
+                  {% csrf_token %}
+                  <input type="hidden">
+                </form>
+              </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login'%}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'register'%}">Register</a>
+            </li>
+            {% endif %}
+          
+            
+        </ul>
+    </div><!-- /.container -->
+</nav>

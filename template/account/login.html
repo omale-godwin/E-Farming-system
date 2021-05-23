@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="stricky-header stricked-menu main-menu">
+    <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+</div><!-- /.stricky-header -->
+<section class="page-header">
+    <div class="page-header__bg" style="background-image: url({% static 'images/backgrounds/page-header-bg-1-1.jpg' %});"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <ul class="thm-breadcrumb list-unstyled">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>/</li>
+            <li><span>Contact Us</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+        <h2>Contact</h2>
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="contact-one">
+    <div class="container">
+        <div class="row">
+            {% include 'partial/_alerts.html' %}
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                <div class="contact-one__content">
+                    <div class="block-title">
+                        <div class="block-title__image"></div><!-- /.block-title__image -->
+                        <p>Login now</p>
+                     
+                        <h3>Login To The Portal</h3>
+                    </div><!-- /.block-title -->
+                 
+                    <div class="contact-one__social">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div><!-- /.contact-one__social -->
+                </div><!-- /.contact-one__content -->
+            </div><!-- /.col-sm-12 -->
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-8">
+               
+             
+                <form action="{% url 'login' %}" method="POST" class="contact-one__form ">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <input type="email" name="username" placeholder="Email">
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-10">
+                            <input type="text" name="password" placeholder="password">
+                        </div><!-- /.col-lg-6 -->
+                       
+                            <div class="col-lg-12">
+                                <input type="submit" value="Login" class="text-center thm-btn">
+                             </div><!-- /.col-lg-12 -->
+                    </div><!-- /.row -->
+                </form>
+            </div><!-- /.col-sm-12 col-md-6 col-lg-8 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.contact-one -->
+
+
+{% endblock %}
